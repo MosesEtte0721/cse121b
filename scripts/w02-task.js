@@ -25,24 +25,21 @@ console.log(imgChange);
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 
 // display the current time the screen
-yearElement.textContent =
-    // change the value of src attribute
-    imgChange.setAttribute("src", filePath);
+yearElement.textContent = currentYear.getFullYear();
+// change the value of src attribute
+imgChange.setAttribute("src", filePath);
 // change the value of alt attribute
 imgChange.setAttribute("alt", `profile picture of ${fullName}`);
-
-
-
-
 
 /* Step 5 - Array */
 let favFood = ["afang soup with Fufu", " Aditan soup with Fufu", " edikang Ikong with Garri", " Jollof Rice", " Asa Iwa", " Ekpang Nkukwo", ];
 // let favFood = [];
 
 let singleFav = "Afang Soup with Fufu";
+// add the singleFav to the favFood array
 favFood.push(singleFav);
-
+// loops through the favFood array and display to the screen
 favFood.forEach((item) => {
-    foodElement.innerHTML = `${favFood}<br>`;
+    foodElement.innerHTML += `<li>${item}</li><br>`;
 
 });
