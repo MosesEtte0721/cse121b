@@ -7,7 +7,7 @@ let fullName = "Moses Archibong Ette";
 
 let currentYear = new Date();
 
-let profilePicture = "../images/mosesette.jpg";
+let profilePicture = "/images/mosesette.jpg";
 
 let nameElement = document.getElementById("name");
 
