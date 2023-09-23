@@ -16,8 +16,6 @@ let foodElement = document.getElementById("food");
 let yearElement = document.querySelector("#year");
 
 let imgChange = document.querySelector("img");
-console.log(imgChange);
-
 
 // Add contents
 
