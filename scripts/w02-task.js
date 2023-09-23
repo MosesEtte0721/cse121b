@@ -34,7 +34,7 @@ let favFood = ["afang soup with Fufu", " Aditan soup with Fufu", " edikang Ikong
 
 let anotherFavoriteFood = "ekpang Iwa";
 
-// add the singleFav to the favFood array
+// add the anotherFavoriteFood to the end of favFood array
 favFood.push(anotherFavoriteFood);
 
 // Remove the first element of favFood array
