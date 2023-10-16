@@ -4,6 +4,13 @@
 
 /* Step 2 - Variables */
 let fullName = "Moses Archibong Ette";
+let obj = {
+    abuja: "alternative"
+}
+let obj1 = {
+    "lagos": "IKEKA"
+}
+console.log(obj1.lagos, obj.abuja)
 
 let currentYear = new Date();
 
