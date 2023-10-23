@@ -38,20 +38,26 @@ imgChange.setAttribute("alt", `profile image of ${fullName}`);
 
 /* Step 5 - Array */
 let favFood = ["afang soup with Fufu", " Aditan soup with Fufu", " edikang Ikong with Garri", " Jollof Rice", " Asa Iwa", " Ekpang Nkukwo", ];
+foodElement.textContent = `<br>${favFood}<br>`;
 
 let anotherFavoriteFood = "ekpang Iwa";
 
 // add the anotherFavoriteFood to the end of favFood array
 favFood.push(anotherFavoriteFood);
+foodElement.innerHTML += `<br>${favFood}<br>`;
+
 
 // Remove the first element of favFood array
 favFood.shift();
+foodElement.innerHTML += `<br>${favFood}<br>`;
 
 // Remove the last element of the favFood array 
 favFood.pop()
+foodElement.innerHTML += `<br>${favFood}<br>`;
+
 
 // loops through the favFood array and display to the screen
 favFood.forEach((item) => {
-    foodElement.innerHTML += `<li>${item}</li><br>`;
+    foodElement.innerHTML += `${item}`;
 
 });
