@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style/project.css">
+        <title>project-cse121b</title>
+    </head>
+
+    <body>
+        <header>
+         
+            <nav class="header-nav">
+                <div class="menu-bar">
+                    <div class="m-bar"></div>
+                    <div class="m-bar"></div>
+                    <div class="m-bar"></div>
+                    <span>menu</span>
+                </div>
+            
+                <ul class="off header_nav_ul" id="hamburger">
+                    
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                
+            </nav>
+            
+           
+        </header>
+        <main>
+            <div class="main-div-container">
+                <div class="search-div">
+                    <label for="select-search">
+                        <select name="select-search" id="select-products">
+                            <optgroup label="Clothing">
+                                <option  disabled selected >Select products</option>
+                                <option value="Trousers">Trousers </option>
+                                <option value="Towels">Towels </option>
+                                <option value="Socks">Socks </option>
+                                <option value="T-Shirts">Shirts </option>
+                                <option value="Caps">Cap </option>
+                                <option value="Sneakers">Sneakers</option>
+                                <option value="Shoes">Shoes</option>
+                                <option value="Slippers">Slippers</option>
+
+                            </optgroup>
+                            <optgroup label="Tech Products">
+                                <option value="Phones">Phones</option>
+                                <option value="Computers">Computers</option>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Televisions">Televisions</option>
+                                <option value="Watches">Wrist Watch</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Routers">Routers</option>
+                            </optgroup>
+                        </select> 
+                    </label>
+                  <div class="product-search">
+                  <input type="text" class="input-search" name="search-box" placeholder="Search for specific product">
+                        <label for="submit-btn">
+                            <button type="submit" id="search" name="submit-btn">Search</button>
+                        </label>
+                    </div>
+                </div>
+                    <div class="product-category">
+                        <ul class="div-ul">
+                            <li>souvenir</li>
+                            <li>Books</li>
+                            <li>Arts</li>
+                            <li>Classic Music</li>
+                            <li>Photo Frame</li>
+                            <li>Paint Brush</li>
+                        </ul>
+                
+                     </div>
+               
+            </div>
+            
+            <div class="display-products"><h1> Find Your Favourite Amazon products</h1></div>
+        </main>
+        <footer class="footer-class"><span>&copy;</span > | Moses Ette | CSE 121b</footer>
+
+        <script type="module" src="./script/project.js"></script>
+
+    </body>
+
+</html>

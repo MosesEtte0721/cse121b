@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+nav {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.868);
+
+}
+
+.header_nav_ul{
+    display: flex;
+
+}
+
+.off{
+    display: none;
+}
+
+.color {
+    display: none;
+    background-color: yellow;
+    height: 15px;
+    width: 50%;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+nav ul li {
+    
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+
+    flex: 1 1 auto;
+}
+   
+
+
+nav ul li:hover {
+background-color: gray;
+}
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+button,input{
+    font-size: 15px;
+}
+
+button,select {
+    margin-top: 5px;
+    font-size: 18px;
+    color: black;
+    
+}
+
+select, input {
+    height: 30px;
+}
+
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.868);
+    height: 30px;
+    margin-top: 15px;
+
+   
+}
+
+.footer-class{
+    color: gold;
+}
+img {
+    max-width: 100%;
+}
+
+article {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(24, 245, 245, 0.744);
+    justify-content: center;
+    align-items: center;
+
+}
+
+article h4 {
+    font-style: oblique;
+}
+
+article :nth-child(3) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav span{
+    color: white;
+}
+
+
+
+.article-anchor-1 {
+    width: 45%;
+    /* display: none; */
+}
+
+.article-anchor-2 {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /* max-width: 100%; */
+}
+
+.article-store{
+    font-style: oblique;
+    color: red;
+}
+
+.article-anchor-2 img {
+    max-width: 40%;
+}
+
+.secondary-photos img {
+    border: goldenrod 2.5px solid;
+    border-radius: 10%;
+    /* margin: auto; */
+    margin: 3px;
+
+}
+
+.article-anchor-2 img:hover {
+    /* width: 100%; */
+    border: none;
+}
+
+article .secondary-photos {
+    max-width: 100%;
+
+}
+
+.article-price {
+    color: red;
+} 
+
+.div-ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0px;
+
+}
+
+.div-ul li {
+    list-style: none;
+    margin: 10px 10px;
+    /* color: rgba(255, 145, 0, 0.795); */
+    color: blue;
+    width: 100%;
+    font-size: 19px;
+}
+
+.div-ul li:hover {
+    background-color: black;
+    margin: 0;
+     color: white;
+     padding:10px;
+
+}
+
+.search-div, .product-search{
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    width:50%;
+}
+
+
+.search-div {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    margin: 20px 20px;
+}
+
+.menu-bar {
+    display: block;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: black;
+}
+
+.m-bar {
+    background-color:white;
+    margin-top: 5px ;
+    height: 5px;
+    max-width:35px;
+}
+
+
+
+
+@media only screen and (min-width: 490px) {
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        /* flex: 1 1 0; */
+        row-gap: 20px;
+    }   
+
+    
+
+    nav {
+        margin: 0;
+        padding: 0;
+        flex: 1 1 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+
+    .menu-bar {
+        display: none;
+    }
+
+    button,select {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .display-products {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1 0 1;
+     
+    }
+
+    .off{
+        display: flex;
+    }
+
+    article{
+        width: 30%;
+    }
+
+    footer{
+        background-color: black;
+    }
+
+}

@@ -81,7 +81,7 @@ let sortBy = function (temples) {
 }
 
 // getTemples();
-getTemples()
+getTemples();
 
 /* Event Listener */
 
