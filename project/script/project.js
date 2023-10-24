@@ -1,10 +1,49 @@
 import convertJson from "./convert.mjs";
 
-let searchInput = document.querySelector(".input-search");
+let searchDiv = document.querySelector(".search-div");
+
+let selectElement = ` 
+                        <div class="product-search">
+                  <label for="input-search"><input type="text"  id="input-search" placeholder="Search for specific product"></label>
+                        <label for="search">
+                            <button type="submit" id="search" >Search</button>
+                        </label>
+                    </div>  <select name="select-search" id="select-products">
+                            <optgroup label="Clothing">
+                                <option disabled selected >select products</option>
+                                <option value="Trousers">Trousers </option>
+                                <option value="Towels">Towels </option>
+                                <option value="Socks">Socks </option>
+                                <option value="T-Shirts">Shirts </option>
+                                <option value="Caps">Cap </option>
+                                <option value="Sneakers">Sneakers</option>
+                                <option value="Shoes">Shoes</option>
+                                <option value="Slippers">Slippers</option>
+
+                            </optgroup>
+                            <optgroup label="Tech Products">
+                                <option value="Phones">Phones</option>
+                                <option value="Computers">Computers</option>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Televisions">Televisions</option>
+                                <option value="Watches">Wrist Watch</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Routers">Routers</option>
+                            </optgroup>
+                        </select>      
+                    
+`;
+
+searchDiv.innerHTML += selectElement;
+let searchInput = document.querySelector("#input-search");
 let searchBtn = document.querySelector("#search");
 
-let selectInput = document.querySelector("#select-products");
 let menuBar = document.querySelector(".menu-bar");
+
+
+
+
+let selectInput = document.querySelector("#select-products");
 
 
 function mobileView(){
@@ -14,10 +53,18 @@ function mobileView(){
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '82b26b9184mshe2568d5ed2c6d1dp12e6b8jsna2e0f2be2c72',
+        'X-RapidAPI-Key': '7a24746280msh7d7e0e4857dadecp11b367jsn2fa936b108d6',
         'X-RapidAPI-Host': 'real-time-product-search.p.rapidapi.com'
     }
 };
+
+// const options = {
+//     method: 'GET',
+//     headers: {
+//         'X-RapidAPI-Key': '82b26b9184mshe2568d5ed2c6d1dp12e6b8jsna2e0f2be2c72',
+//         'X-RapidAPI-Host': 'real-time-product-search.p.rapidapi.com'
+//     }
+// };
 
 // set the localStorage item
 function setStorage(key, val) {
@@ -47,6 +94,7 @@ let switchControl = ()=> {
     switch (selectInput.value) {
         case "Trousers":
             coy = selectInput;
+            console.log(coy)
            
             getApi(coy); 
             break;
@@ -123,7 +171,7 @@ let switchControl = ()=> {
 
 //creates list of products with template literal 
 function template(info) {
-    let loop = info.forEach(product => { //info[0].data.
+    let loop = info.map(product => { //info[0].data.
 
         let photo = product.product_photos;
         let price = product.offer.price;
@@ -144,14 +192,14 @@ function template(info) {
 
 // fetch products from amazon products 
 let getApi = async (sac) => {
-    
  url = `https://real-time-product-search.p.rapidapi.com/search?q=${sac.value}&country=us&language=en`;
+//  url = `https://real-time-product-search.p.rapidapi.com/search?q=${sac.value}&country=us&language=en`;
     let getUrl = await fetch(url, options);
     let convert = await convertJson(getUrl);
     let loop = await convert.data.map(product => {
         let photo = product.product_photos;
         let price = product.offer.price;
-        return product
+        return product;
     })
 
     let temp = template(loop)
@@ -169,7 +217,6 @@ menuBar.addEventListener("click", (e)=>{
 
 selectInput.addEventListener("change", (e)=>{
     e.preventDefault();
-   
     switchControl()
 });
 
@@ -177,5 +224,6 @@ searchBtn.addEventListener("click", (e)=>{
     e.preventDefault();
   
      getApi(searchInput)
+    
 
 });

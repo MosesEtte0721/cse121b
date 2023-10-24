@@ -74,7 +74,7 @@ button,input{
 
 button,select {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 22px;
     color: black;
     
 }
@@ -83,6 +83,9 @@ select, input {
     height: 30px;
 }
 
+picture {
+    width: 100%;
+}
 
 footer {
     display: flex;
@@ -100,7 +103,7 @@ footer {
     color: gold;
 }
 img {
-    max-width: 100%;
+  width: 100%;
 }
 
 article {
@@ -122,6 +125,9 @@ article :nth-child(3) {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 0 0;
 }
 nav span{
     color: white;
@@ -206,7 +212,7 @@ article .secondary-photos {
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    width:50%;
+    /* width:40%; */
 }
 
 
@@ -231,13 +237,16 @@ article .secondary-photos {
     max-width:35px;
 }
 
-
+.search-div {
+    display: flex;
+    flex-flow: column-reverse;
+}
 
 
 @media only screen and (min-width: 490px) {
     main {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         /* flex: 1 1 0; */
         row-gap: 20px;
     }   
@@ -245,7 +254,7 @@ article .secondary-photos {
     
 
     nav {
-        margin: 0;
+        margin-bottom: 10px;
         padding: 0;
         flex: 1 1 0;
     }
@@ -263,21 +272,33 @@ article .secondary-photos {
     button,select {
         margin-top: 5px;
         font-size: 20px;
+        max-width: 100%;
     }
 
     .display-products {
         display: flex;
         flex-flow: row wrap;
-        flex: 1 0 1;
+        flex: 1 1 0;
+        
+       
      
     }
 
     .off{
         display: flex;
     }
+    /* .product-category {
+        width: 40%;
+    } */
+    .main-div-container {
+        width: 35%;
+    }
 
     article{
+        margin-top: 10px; 
         width: 30%;
+        padding: 5px;
+     
     }
 
     footer{
