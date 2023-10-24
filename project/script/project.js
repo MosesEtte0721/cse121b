@@ -87,6 +87,11 @@ function clearSelect(){
     inputer += "";
 }
 
+function clearInput() {
+    let inputSearch = document.querySelector("#input-search");
+    inputSearch += "";
+}
+
 
 //  control flow function expression checks drop-down value
 let switchControl = ()=> {
@@ -222,7 +227,7 @@ selectInput.addEventListener("change", (e)=>{
 
 searchBtn.addEventListener("click", (e)=>{
     e.preventDefault();
-  
+    clearSelect()
      getApi(searchInput)
     
 
